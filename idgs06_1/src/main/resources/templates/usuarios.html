@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Todos  los Usuarios</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Usuario</h1>
+        <table>
+            <thead>
+                <th>Id</th>
+                <th>Usuario</th>
+                <th>Password</th>
+                <th>Telefonos</th>
+            </thead>
+            <tr data-th-each="dato : ${datos}">
+                <td data-th-text="${dato.idUsuario}"></td>
+                <td data-th-text="${dato.usuario}"></td>
+                <td data-th-text="${dato.password}"></td>
+                <td data-th-each="t : ${dato.telefonos}">
+                    <p data-th-text="${t.telefono}"></p>
+                </td>
+            </tr>
+        </table>
+        <br>
+    </body>
+</html>

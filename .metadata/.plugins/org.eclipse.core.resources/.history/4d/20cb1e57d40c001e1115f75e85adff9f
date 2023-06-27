@@ -1,0 +1,8 @@
+package mx.edu.uteq.repository;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface IUsuarioRepository extends JpaRepository<Usuario, Integer> {
+
+}

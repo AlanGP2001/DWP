@@ -1,0 +1,5 @@
+package mx.edu.uteq.service;
+
+public class UserDetailServiceImpl {
+
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <a href="dom.html">Regresar Atras</a><br><br>
+
+        <h2>Encontrar elementos por Query Selector</h2>
+
+        <p>Hello World!</p>
+
+        <p class="intro">El DOM es muy útil.</p>
+        <p class="intro">Este ejemplo muestra el método <b>querySelectorAll</b></p>
+            
+        <p id="demo"></p>
+
+        <script>
+            var x = document.querySelectorAll("p.intro");
+            document.getElementById("demo").innerHTML = 
+            'El primer párrafo (índice 0) con la clase="intro" es: ' + x[0].innerHTML;
+        </script>
+    </body>
+</html>

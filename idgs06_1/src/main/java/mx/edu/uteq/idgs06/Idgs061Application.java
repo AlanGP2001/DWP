@@ -1,0 +1,13 @@
+package mx.edu.uteq.idgs06;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Idgs061Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Idgs061Application.class, args);
+	}
+
+}

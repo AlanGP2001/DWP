@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <a href="dom.html">Regresar Atras</a><br><br>
+
+        <h2>Encontrar elementos HTML con document.forms</h2>
+
+        <form id="frml" action="#">
+            Nombre: <input type="text" name="fname" value="Marco"><br>
+            Apellido: <input type="text" name="lname" value="Polo"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <p>Da clic a "Probar" para mostrar el valor de cada elemento del formulario</p>
+
+        <button onclick="myFunction()"> Probar </button>
+
+        <p id="demo"></p>
+
+        <script>
+            function myFunction() {
+                var x = document.forms["frml"];
+                var text = "";
+                var i;
+                for (i = 0; i < x.length;  i++) {
+                    text += x.elements[i].value + "<br>";
+                }
+                document.getElementById("demo").innerHTML = text;
+            }
+        </script>
+    </body>
+</html>

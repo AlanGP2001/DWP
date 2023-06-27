@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Recuperación de Contraseña</title>
+</head>
+
+<body>
+  <h2>Recuperación de Contraseña</h2>
+
+  <form th:action="@{/usuario/recuperar-contrasena}" method="post">
+    <div>
+      <label for="emailRecuperacion">Email:</label>
+      <input type="email" id="emailRecuperacion" name="emailRecuperacion" required />
+    </div>
+
+    <button type="submit">Recuperar Contraseña</button>
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <a href="dom.html">Regresar Atras</a><br><br>
+
+        <h2>Encontrar elementos por el Tag Name</h2>
+
+        <div id="main">
+            <p>El DOM es muy útil.</p>
+            <p>Este ejemplo muestra el método <b>getElementsByTagName</b></p>
+        </div>
+            
+        <p id="demo"></p>
+
+        <script>
+            var x = document.getElementById("main");
+            var y = x.getElementsByTagName("p");
+            document.getElementById("demo").innerHTML = 
+            'El texto del primer párrafo (índice 0) dentro del "main" es: ' + y[0].innerHTML;
+        </script>
+    </body>
+</html>
