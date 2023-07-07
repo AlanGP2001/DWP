@@ -1,0 +1,70 @@
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <div data-th-replace="~{fragments/fragmento :: header}">
+        </div>
+        <div class="container">
+            <h2 data-th-text="${operacion}"></h2>
+            
+            <div>
+                <form data-th-action="@{/guardar-usuario }" method="post" data-th-object="${usuario}">
+                    <input type="hidden" name="idUsuario" data-th-field="*{idUsuario}"/>
+                    <div class="form-group row">
+                        <label class="col-sm-2" for="nombre">* Usuario:</label>
+                        <div class="col-sm-6">
+                            <input type="text" id="nombre" name="nombre" data-th-field="*{user} "/>
+                            <small class="form-text text-danger" data-th-if="#{fields.hasErrors('user')}"
+                                  data-th-errors="*{user}">Error usuario</small>
+                        </div> 
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2" for="contrasena">* Password:</label>
+                        <div class="col-sm-6">
+                        <input type="password" id="contrasena" name="contrasena" data-th-field="*{password} "/>
+                        <small class="form-text text-danger" data-th-if="#{fields.hasErrors('password')}"
+                              data-th-errors="*{password}">Error password</small>
+                        </div>
+                    </div>
+                    <div data-th-if="${#lists.isEmpty(usuario.telefonos)}">
+                        <span data-th-text="'No hay telefonos'" ></span>
+                    </div>
+
+                    <div>                
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Telefono</th>
+                                    <th>Tipo</th>
+                                </tr>
+                            </thead>
+
+                            <tr data-th-each="tel,itemStat : *{telefonos}">
+                                <td><input type="hidden" name="id" 
+                                           data-th-field="*{telefonos[__${itemStat.index}__].id}" />
+                                    <input name="numero" 
+                                           data-th-field="*{telefonos[__${itemStat.index}__].numero}" /></td>
+                                <td><input name="tipo" 
+                                           data-th-field="*{telefonos[__${itemStat.index}__].tipo}" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <input type="submit" class="btn btn-success btn-sm" 
+                           name="guardar" data-th-value="${boton}"/>
+                    <input type="reset" class="btn btn-secondary btn-sm" name="resetear" value="Cancelar"/>
+                    <input type="button" class="btn btn-secondary btn-sm" name="regresar" value="Regresar" data-th-attr="onclick=|location.href='/usuarios'|"/>
+                </form>
+            </div>
+        </div>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    </body>
+</html>

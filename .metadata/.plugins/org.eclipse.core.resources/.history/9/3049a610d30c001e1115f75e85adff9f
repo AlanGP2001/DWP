@@ -1,5 +1,0 @@
-package mx.edu.uteq.service;
-
-public interface ProductoService {
-
-}

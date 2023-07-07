@@ -2700,3 +2700,10 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.webjars:f
 2023-06-23 18:08:57,124 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2023-06-23 18:08:57,157 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 51 resources from src\main\resources to target\classes
 2023-06-23 18:08:57,219 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gladi\Documents\Ingeneria\Segundo Cuatrimestre\DESARROLLO WEB PROFESIONAL\workspace\evaluacion-1\src\test\resources
+2023-06-30 17:32:59,794 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-06-30 17:33:09,840 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 17:33:09,882 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 51 resources from src\main\resources to target\classes
+2023-06-30 17:33:10,041 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\gladi\Documents\Ingeneria\Segundo Cuatrimestre\DESARROLLO WEB PROFESIONAL\workspace\evaluacion-1\src\test\resources
+2023-06-30 18:20:26,137 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-07-04 17:17:01,555 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-07-04 17:52:40,631 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
